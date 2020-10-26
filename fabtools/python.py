@@ -23,6 +23,9 @@ from fabric.utils import puts
 from fabtools.files import is_file
 from fabtools.utils import abspath, download, run_as_root
 
+import sys
+if sys.version_info.major == 3:
+    basestring= str
 
 GET_PIP_URL = 'https://bootstrap.pypa.io/get-pip.py'
 

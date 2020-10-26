@@ -13,6 +13,9 @@ from fabric.api import hide, quiet, run, settings
 from fabtools.files import is_file
 from fabtools.utils import run_as_root
 
+import sys
+if sys.version_info.major == 3:
+    basestring= str
 
 MANAGER = 'pkgin'
 

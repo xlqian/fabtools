@@ -17,6 +17,9 @@ from fabtools.group import (
 from fabtools.files import uncommented_lines
 from fabtools.utils import run_as_root
 
+import sys
+if sys.version_info.major == 3:
+    basestring= str
 
 def exists(name):
     """

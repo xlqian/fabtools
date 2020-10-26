@@ -12,6 +12,9 @@ from fabric.api import hide, run, settings
 from fabtools.utils import run_as_root
 from fabtools.files import getmtime, is_file
 
+import sys
+if sys.version_info.major == 3:
+    basestring= str
 
 MANAGER = 'DEBIAN_FRONTEND=noninteractive apt-get'
 

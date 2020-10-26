@@ -13,6 +13,9 @@ from fabric.api import cd, run
 
 from fabtools.utils import download, run_as_root
 
+import sys
+if sys.version_info.major == 3:
+    basestring= str
 
 EZ_SETUP_URL = 'https://bootstrap.pypa.io/ez_setup.py'
 

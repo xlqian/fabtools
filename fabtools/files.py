@@ -20,6 +20,10 @@ from fabric.contrib.files import exists
 
 from fabtools.utils import run_as_root
 
+import sys
+if sys.version_info.major == 3:
+    basestring= str
+
 
 def is_file(path, use_sudo=False):
     """
