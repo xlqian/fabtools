@@ -14,7 +14,8 @@ from fabtools.utils import run_as_root
 
 
 def action(action, service):
-    return run_as_root('systemctl %s %s.service' % (action, service,))
+    # --no-pager allows systemctl returns immediatly
+    return run_as_root('systemctl %s %s.service --no-pager' % (action, service,))
 
 
 def enable(service):
